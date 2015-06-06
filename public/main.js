@@ -57,8 +57,12 @@ var terminal = new Terminal();
 $(document).ready(function(){
     var url = 'http://54.158.234.53:4000/siteupdate'
     
-    $.ajax.put(url).success(function(data){
-        console.log(data);
+    $.ajax({
+        method: 'PUT',
+        url: url,
+        success: function(data){
+            console.log(data);
+        }
     })
     
 })
