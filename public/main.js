@@ -53,3 +53,12 @@ var terminal = new Terminal();
         },c+=1000)
         
     }, false);
+
+$(document).ready(function(){
+    var url = 'http://54.158.234.53:4000/siteupdate'
+    
+    $.ajax.put(url).success(function(data){
+        console.log(data);
+    })
+    
+})
